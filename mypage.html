@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <title>My Start Page</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, sapiente quae? Nihil error accusamus vero reprehenderit maxime. Molestias tempore hic nemo accusamus, saepe esse similique a modi ad culpa animi.</p>
+    <h4>Sign up</h4>
+						<br />
+						<form id="signup-form">
+							<div class="input-field">
+								<input type="email" id="signup-email" required />
+								<label for="signup-email">Email address</label>
+							</div>
+							
+							<div class="input-field">
+								<input type="text" id="signup-name" required />
+								<label for="signup-email">Name</label>
+							</div>
+							<div class="input-field">
+								<input type="password" id="signup-password" required />
+								<label for="signup-password">Choose password</label>
+							</div>
+							<button class="btn yellow darken-2 z-depth-0">Sign up</button>
+						</form>
+					
+
+				<!-- LOGIN MODAL -->
+				
+						<h4>Login</h4>
+						<br />
+						<form id="login-form">
+							<div class="input-field">
+								<input type="email" id="login-email" required />
+								<label for="login-email">Email address</label>
+							</div>
+							<div class="input-field">
+								<input type="password" id="login-password" required />
+								<label for="login-password">Your password</label>
+							</div>
+							<button class="btn yellow darken-2 z-depth-0">Login</button>
+                        </form>
+                        
+    <div class="loader">
+
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>Hey <span class="username"></span>, Let's Rock Today</h1>
+        </div>
+        <div class="wrapper">
+            <div class="news-grid">
+
+            </div>
+            <div class="todo">
+                    <h1 class="todo-heading">Add your Tasks</h1>
+                    <input type="text" name="task" placeholder="Enter Your Task here">
+                    <div class="tooltip">
+                        <input type="time" name="" id="">
+                        <span class="tooltiptext">Enter Duration</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+	<script src="firebase.js">
+	
+	</script>
+
+    <script src="index.js"></script>
 </body>
 </html>
