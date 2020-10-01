@@ -68,14 +68,19 @@
             <div class="todo">
                 <div class="add_todo">
                     <h1 class="todo-heading">Add your Tasks</h1>
-                    <div class="input_fields">
-                        <input type="text" name="task" placeholder="Enter Your Task here">
+                    <form class="input_fields">
+                        <input type="text" name="task" class="task_val" placeholder="Enter Your Task here" required>
                         <div class="tooltip">
-                            <input type="time" name="" id="">
-                            <span class="tooltiptext">Enter Duration</span>
+                            <input type="time" name="" id="" class="start_time" required>
+                            <span class="tooltiptext">Enter Start Time</span>
                         </div>
-                        <button class="btn">Add</button>
-                    </div>
+                        <div class="tooltip">
+                            <input type="number" class="duration" required />
+                            <span class="tooltiptext">Enter Duration(in minutes)</span>
+                        </div>
+                        
+                        <button type="submit" class="btn add_btn">Add</button>
+                    </form>
                 </div>
                 <ul class="todolist">
 

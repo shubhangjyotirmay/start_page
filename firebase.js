@@ -19,6 +19,7 @@ auth.onAuthStateChanged(user=>{
     // var handle_name=document.getElementById('')
     if(user)
     {
+        let id;
         console.log("user logged in");
         db.collection('users').get().then(snapshot=>{
             snapshot.docs.forEach(doc=>{
@@ -27,11 +28,13 @@ auth.onAuthStateChanged(user=>{
                 {
                     name=user_list.name;
                     console.log(name);
+                    console.log(doc)
                 }
         })
         document.querySelector('.loader').classList.add("disapper");
         document.querySelector('.login_signup').classList.add("hidden");
-        dashboard(name,user)
+        document.querySelector('.after_login').classList.remove("hidden");
+        dashboard(name,id)
 
         })
     }
@@ -85,8 +88,8 @@ loginForm.addEventListener('submit',(e)=>{
     auth.signInWithEmailAndPassword(email,pwd).then(cred=>{
         console.log(cred);
         
-        const modal=document.querySelector('#modal-login');
-        M.Modal.getInstance(modal).close();
-        loginForm.reset();
+        // const modal=document.querySelector('#modal-login');
+        // M.Modal.getInstance(modal).close();
+        // loginForm.reset();
     })
 })  
